@@ -1,3 +1,53 @@
-<h1><button type="button">START</button>  
-<button type="button">PAUSE</button> 
-<button type="button">STOP</button>   </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recording</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+            <a href="./frontPage.html" class="active">NoteAI</a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="./recording.html">Recording</a>
+                <a href="#contact">Upload</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <h1><button type="button">START</button>
+            <button type="button">PAUSE</button>
+            <button type="button">STOP</button>
+        </h1>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
+
+<script>
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>

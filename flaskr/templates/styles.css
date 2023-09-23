@@ -1,3 +1,25 @@
 body{
-    background-color:purple;
+    background-color:#DEDBD2;
+}
+h1,h2,h3{
+    color:#1C1018;
+}
+p{
+    color:#1C1018;
+}
+
+a:link{
+    color:#DA4167;
+}
+a:visited{
+    color:#AD5E72;
+}
+a:focus{
+    color:#214F4B;
+}
+a:hover{
+    color:#B0C4B1;
+}
+a:active{
+    color:#DEDBD2;
 }

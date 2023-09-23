@@ -5,15 +5,13 @@ import azure.cognitiveservices.speech as speechsdk
 speech_config = speechsdk.SpeechConfig(subscription=os.environ.get(
     'SPEECH_KEY'), region=os.environ.get('SPEECH_REGION'))
 
-src_filename = "president_speech.mp3"
-dest_filename = "president_speech.wav"
 
 file = open('transcription.txt', 'a')
 file.truncate(0)
 
 
 def from_file():
-    audio_input = speechsdk.AudioConfig(filename="president_speech.wav")
+    audio_input = speechsdk.AudioConfig(filename="audio.wav")
     speech_recognizer = speechsdk.SpeechRecognizer(
         speech_config=speech_config, audio_config=audio_input, language="en-US"
     )

@@ -12,9 +12,13 @@ def open_front_page():
 def route_ata():
     return redirect('https://ata.mroley.dev')
 
-@app.route('/uploading', methods=['GET', 'POST'])
+@app.route('/upload.html', methods=['GET', 'POST'])
 def send_to_uploading():
     if request.method == 'POST':
         print(request.form.listvalues())
         
     return render_template('upload.html')
+
+@app.route('/recording.html')
+def send_to_recording():
+    return render_template('recording.html')

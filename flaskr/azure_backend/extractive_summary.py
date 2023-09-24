@@ -16,8 +16,6 @@ def authenticate_client():
     return text_analytics_client
 
 
-client = authenticate_client()
-
 # Example method for summarizing text
 
 
@@ -27,6 +25,8 @@ def sample_extractive_summarization(client):
         TextAnalyticsClient,
         ExtractiveSummaryAction
     )
+
+    client = authenticate_client()
 
     file = open("transcription.txt", "r")
     file_s = file.read()
@@ -60,6 +60,3 @@ def sample_extractive_summarization(client):
             file.write("Summary extracted: \n{}".format(
                 " ".join([sentence.text for sentence in extract_summary_result.sentences]))
             )
-
-
-sample_extractive_summarization(client)

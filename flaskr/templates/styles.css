@@ -49,6 +49,7 @@ a:active{
     display: none;
   }
   
+  
   /* Style navigation menu links */
   .topnav a {
     color: white;
@@ -79,7 +80,11 @@ a:active{
     color: white;
   }
 
-  #cat{
+  .inactive{
+    background-color: #214F4B;
+  }
+
+  #sideImage{
     margin: 0 10px;
     width:40%;
     border: 1px solid black;

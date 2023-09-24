@@ -41,14 +41,15 @@ def route_ata():
     return redirect('https://ata.mroley.dev')
 
 
-@app.route('/upload.html', methods=['GET', 'POST'])
+@app.route('/upload', methods=['GET', 'POST'])
 def send_to_uploading():
     print('upload')
     if request.method == 'POST':
-        print(request.files)
+        # print(request.files)
         file = request.files['filename']
         filename = secure_filename(file.filename)
-        file.save(os.path.join(os.getcwd(), f"flaskr/output/{filename}"))
+        with open('flaskr/audio.mp3', 'wb') as f:
+            file.save(f)
         return requests.post('http://127.0.0.1:5000/transcribing',
                              filename).content
 
@@ -58,3 +59,8 @@ def send_to_uploading():
 @app.route('/recording.html')
 def send_to_recording():
     return render_template('recording.html')
+
+
+@app.route('/')
+def send_to_front_page():
+    return render_template('frontPage.html')

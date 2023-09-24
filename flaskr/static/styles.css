@@ -9,11 +9,18 @@ h1,h2,h3{
 }
 
 h1{
-    font-size: xx-large;
+    font-size: 60px;
+}
+h2{
+    font-size: 40px;
+    margin-left:5%;
+}
+h3{
+  font-size: 30px;
 }
 p{
     color:#1C1018;
-    font-size: large;
+    font-size: 24px;
     margin: 10px 5px;
 
 }
@@ -87,11 +94,26 @@ a:active{
   }
 
   #sideImage{
-    margin: 0 10px;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
     width:40%;
     border: 1px solid black;
-    float:right;
-    box-shadow: 5px 5px 15px;
     border-radius: 5px;
+  }
+
+  .border{
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #C2BDAD;
+    background-color: #C2BDAD;
+    border-radius: 10px;
+    clear: right;
+  }
+
+  button{
+    border-radius: 100px;
+    border: 1px solid black;
   }
   

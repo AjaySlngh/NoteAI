@@ -22,18 +22,21 @@ def open_front_page():
     extract.sample_extractive_summarization(extract.authenticate_client)
     output.write_file()
     output.reset_file()
+    mp3wav.delete_wav()
 
     return redirect('/display')
 
 
 @app.route('/display', methods=['GET', 'POST'])
 def display_file():
+    file = open('abstract_summary.txt', "r")
+    content1 = file.read()
+    file = open('extractive_summary.txt', "r")
+    content2 = file.read()
     file = open('final_summary.txt', "r")
-    content = file.read()
+    content3 = file.read()
 
-    print(content)
-
-    return render_template('upload.html', content=content)
+    return render_template('upload.html', content1=content1, content2=content2, content3=content3)
 
 
 @app.route('/ata')

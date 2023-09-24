@@ -6,18 +6,30 @@
     <title>Recording</title>
     <link rel="stylesheet" href={{url_for('static', filename='styles.css')}}>
 </head>
-
-<body>
+<main>
     {% include 'header.html' %}
-    <body>
-        <button id="start-button">Start Capture</button>
+    <h1>Record</h1>
+    <p>Record a File for Transcription</p>
+    <button id="start-button">Start Capture</button>
         <button id="stop-button">Stop Capture</button>
         <script src={{url_for("static", filename="record.js")}}></script>
-      </body>
+        <br />
+    <h2>Transcript:</h2>
+    <div class="border">
+      <h3>Abstract Summary</h3>
+      <p>{{content1}}</p>
+      <br />
+      <h3>Extractive Summary</h3>
+      <p>{{content2}}</p>
+      <br />
+      <h3>Transcription</h3>
+      <p>{{content3}}</p>
+    </div>
+  </main>
+
     <footer>
 
     </footer>
-</body>
 
 </html>
 

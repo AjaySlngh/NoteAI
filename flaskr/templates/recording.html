@@ -4,46 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Recording</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href={{url_for('static', filename='styles.css')}}>
 </head>
 
 <body>
-    <header>
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!-- Top Navigation Menu -->
-        <div class="topnav">
-            <a href="./frontPage.html" class="active">NoteAI</a>
-            <!-- Navigation links (hidden by default) -->
-            <div id="myLinks">
-                <a href="./recording.html">Recording</a>
-                <a href="./upload.html">Upload</a>
-            </div>
-            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </header>
-    <main>
-        <img src="./images/spongebob.jpg" alt="spongbob" id="sideImage">
-        <input type="file" accept="audio/*" capture id="recorder" />
-<audio id="player" controls></audio>
-  <script>
-    const recorder = document.getElementById('recorder');
-    const player = document.getElementById('player');
-
-    recorder.addEventListener('change', function (e) {
-      const file = e.target.files[0];
-      const url = URL.createObjectURL(file);
-      // Do something with the audio file.
-      player.src = url;
-    });
-  </script>
-</audio>
-    </main>
+    {% include 'header.html' %}
+    <body>
+        <button id="start-button">Start Capture</button>
+        <button id="stop-button">Stop Capture</button>
+        <script src={{url_for("static", filename="record.js")}}></script>
+      </body>
     <footer>
 
     </footer>

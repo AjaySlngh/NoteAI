@@ -33,7 +33,3 @@ def sample_abstractive_summarization() -> None:
                 result.error.code, result.error.message
             ))
     file.close()
-
-
-if __name__ == "__main__":
-    sample_abstractive_summarization()

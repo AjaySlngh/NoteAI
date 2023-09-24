@@ -16,7 +16,7 @@ app = Flask(__name__)
 @app.route('/transcribing', methods=['POST'])
 def open_front_page():
     print(request.data)
-    mp3wav.mp3_to_wav(request.data)
+    mp3wav.mp3_to_wav()
     transcribe.from_file()
     abstract.sample_abstractive_summarization()
     extract.sample_extractive_summarization(extract.authenticate_client)

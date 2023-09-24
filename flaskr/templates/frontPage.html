@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>NoteAI</title>
     <link rel="stylesheet" href={{url_for('static', filename='styles.css')}}>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Top Navigation Menu -->
-        <div class="topnav">
-            <a href="./frontPage.html" class="active">NoteAI</a>
-            <!-- Navigation links (hidden by default) -->
-            <div id="myLinks">
-                <a href="./recording.html">Recording</a>
-                <a href="./upload.html">Upload</a>
-            </div>
-            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="./" class="active">NoteAI</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="./recording.html">Recording</a>
+          <a href="./upload">Upload</a>
         </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </header>
     <main>
-        <div>
-            <img src="./images/graduation.webp" alt="" id="sideImage">
-            <h1>NoteAI</h1>
-            <p>
-                At NoteAI our goal is to create an easy way to transcribe notes from an audio file.
-                This can be used to assist those who are hard of hearing to record notes from a lecture or video.
-                We are using <a href="https://azure.microsoft.com/en-us/free/search/?ef_id=_k_CjwKCAjwmbqoBhAgEiwACIjzECTsPcKwaFcBpF_A24HjE96m1tJCN2mMXwaQby89QRXHEJy1o75x8BoCUoIQAvD_BwE_k_&OCID=AIDcmmfq865whp_SEM__k_CjwKCAjwmbqoBhAgEiwACIjzECTsPcKwaFcBpF_A24HjE96m1tJCN2mMXwaQby89QRXHEJy1o75x8BoCUoIQAvD_BwE_k_&gad=1&gclid=CjwKCAjwmbqoBhAgEiwACIjzECTsPcKwaFcBpF_A24HjE96m1tJCN2mMXwaQby89QRXHEJy1o75x8BoCUoIQAvD_BwE">
-                    Azure</a>
-                which is an AI that allows us to transcribe text from a audio file. 
-                Then we use the AI to summarize the content of the text file.
-            </p>
-        </div>
+      <div>
+        <img src="./images/graduation.webp" alt="" id="sideImage" />
+        <h1>NoteAI</h1>
+        <p>
+          At NoteAI our goal is to create an easy way to transcribe notes from
+          an audio file. This can be used to assist those who are hard of
+          hearing to record notes from a lecture or video. We are using
+          <a
+            href="https://azure.microsoft.com/en-us/free/search/?ef_id=_k_CjwKCAjwmbqoBhAgEiwACIjzECTsPcKwaFcBpF_A24HjE96m1tJCN2mMXwaQby89QRXHEJy1o75x8BoCUoIQAvD_BwE_k_&OCID=AIDcmmfq865whp_SEM__k_CjwKCAjwmbqoBhAgEiwACIjzECTsPcKwaFcBpF_A24HjE96m1tJCN2mMXwaQby89QRXHEJy1o75x8BoCUoIQAvD_BwE_k_&gad=1&gclid=CjwKCAjwmbqoBhAgEiwACIjzECTsPcKwaFcBpF_A24HjE96m1tJCN2mMXwaQby89QRXHEJy1o75x8BoCUoIQAvD_BwE"
+          >
+            Azure</a
+          >
+          which is an AI that allows us to transcribe text from a audio file.
+          Then we use the AI to summarize the content of the text file.
+        </p>
+      </div>
     </main>
-    <footer>
-
-    </footer>
-</body>
-
+    <footer></footer>
+  </body>
 </html>
 
 <script>
-    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-    function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
+  /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
     }
+  }
 </script>

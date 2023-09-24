@@ -6,11 +6,9 @@ speech_config = speechsdk.SpeechConfig(subscription=os.environ.get(
     'SPEECH_KEY'), region=os.environ.get('SPEECH_REGION'))
 
 
-file = open('transcription.txt', 'a')
-
-
 def from_file():
-    audio_input = speechsdk.AudioConfig(filename="./audio.wav")
+    file = open('transcription.txt', 'a')
+    audio_input = speechsdk.AudioConfig(filename="flaskr/audio.wav")
     speech_recognizer = speechsdk.SpeechRecognizer(
         speech_config=speech_config, audio_config=audio_input, language="en-US"
     )
@@ -38,3 +36,5 @@ def from_file():
 
     while not done:
         time.sleep(.5)
+
+    file.close()

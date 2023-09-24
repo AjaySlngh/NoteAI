@@ -27,11 +27,18 @@
             </a>
         </div>
     </header>
+    
     <main>
+        <h1>Upload</h1>
+        <p>errrm upload a mp3 file to get some notes</p>
         <form enctype="multipart/form-data" action="uploading" method="post">
-            <p>Upload File: <input type="file" name="filename" /></p>
+            <p>Upload File: <input type="file" name="filename" accept="audio/mp3"/></p>
             <p><input type="submit" value="Upload" /></p>
-
+        </form>
+        <br>
+        <h2>Transcript:</h2>
+        <form Name="Transcript" Method="" Acrtion="">
+            <pre>{{content}}</pre>
         </form>
     </main>
     <footer>

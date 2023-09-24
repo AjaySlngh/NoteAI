@@ -1,21 +1,26 @@
 body{
-    background-color:#C2BDAD;
+    background-color:#DEDBD2;
     margin: 0px 0px;
+    font-family: Roboto, Arial;
 }
 h1,h2,h3{
     color:#1C1018;
     margin: 10px 5px;
 }
 
+h1{
+    font-size: xx-large;
+}
 p{
     color:#1C1018;
+    font-size: large;
+    margin: 10px 5px;
+
 }
 
 header,footer,main{
-    border: 0px solid #DEDBD2;
     margin: 0px auto;
     width:83vw;
-    background-color: #DEDBD2;
 }
 
 a:link{
@@ -45,6 +50,7 @@ a:active{
   .topnav #myLinks {
     display: none;
   }
+  
   
   /* Style navigation menu links */
   .topnav a {
@@ -76,4 +82,16 @@ a:active{
     color: white;
   }
 
+  .inactive{
+    background-color: #214F4B;
+  }
+
+  #sideImage{
+    margin: 0 10px;
+    width:40%;
+    border: 1px solid black;
+    float:right;
+    box-shadow: 5px 5px 15px;
+    border-radius: 5px;
+  }
   

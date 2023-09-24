@@ -57,6 +57,6 @@ def sample_extractive_summarization(client):
             print("Summary extracted: \n{}".format(
                 " ".join([sentence.text for sentence in extract_summary_result.sentences]))
             )
-            file.write("Summary extracted: \n{}".format(
+            file.write("{}".format(
                 " ".join([sentence.text for sentence in extract_summary_result.sentences]))
             )

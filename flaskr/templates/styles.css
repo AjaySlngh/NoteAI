@@ -1,14 +1,19 @@
 body{
     background-color:#DEDBD2;
     margin: 0px 0px;
+    font-family: Roboto, Arial;
 }
 h1,h2,h3{
     color:#1C1018;
     margin: 10px 5px;
 }
 
+h1{
+    font-size: xx-large;
+}
 p{
     color:#1C1018;
+    font-size: large;
 }
 
 header,footer,main{
@@ -74,4 +79,12 @@ a:active{
     color: white;
   }
 
+  #cat{
+    margin: 0 10px;
+    width:40%;
+    border: 1px solid black;
+    float:right;
+    box-shadow: 5px 5px 15px;
+    border-radius: 5px;
+  }
   

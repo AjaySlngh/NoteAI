@@ -4,7 +4,7 @@ LABEL user="Ajay Singh <>aos2500@g.rit.edu"
 
 WORKDIR /app
 ADD ./ /app
-COPY ../requirements.txt requirements.txt
+COPY ./requirements.txt requirements.txt
 RUN apt-get -yq update && \
     pip install --no-cache-dir -r requirements.txt
 
